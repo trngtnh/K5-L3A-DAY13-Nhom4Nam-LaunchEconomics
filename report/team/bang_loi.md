@@ -4,32 +4,32 @@
 
 ## Hai bộ nhãn độc lập
 
-Người gắn nhãn 1: Nguyễn Nhựt Linh · Người gắn nhãn 2: ... (gắn trong 8 phút, không trao đổi)
+Người gắn nhãn 1: Nguyễn Nhựt Linh · Người gắn nhãn 2: Trần Anh Duy (gắn trong 8 phút, không trao đổi)
 
 Nhãn ở cột 1 do AI đề xuất và được Linh rà soát, xác nhận. Tỉ lệ đồng thuận độc lập cần hai bộ nhãn tự gắn.
 
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
-| 1 | Do người dùng | ... | ... | ... |
-| 2 | Hệ thống | ... | ... | ... |
-| 3 | Ngữ cảnh | ... | ... | ... |
-| 4 | Giới hạn hệ thống | ... | ... | ... |
-| 5 | Ngầm | ... | ... | ... |
-| 6 | Do người dùng | ... | ... | ... |
-| 7 | Hệ thống | ... | ... | ... |
-| 8 | Hệ thống | ... | ... | ... |
-| 9 | Do người dùng | ... | ... | ... |
-| 10 | Ngữ cảnh | ... | ... | ... |
-| 11 | Giới hạn hệ thống | ... | ... | ... |
-| 12 | Ngầm | ... | ... | ... |
-| 13 | Giới hạn hệ thống | ... | ... | ... |
-| 14 | Do người dùng | ... | ... | ... |
-| 15 | Hệ thống | ... | ... | ... |
-| 16 | Ngữ cảnh | ... | ... | ... |
-| 17 | Ngầm | ... | ... | ... |
-| 18 | Ngữ cảnh | ... | ... | ... |
-| 19 | Giới hạn hệ thống | ... | ... | ... |
-| 20 | Hệ thống | ... | ... | ... |
+| 1 | Do người dùng | Do người dùng | ... | ... |
+| 2 | Hệ thống | Hệ thống | ... | ... |
+| 3 | Ngữ cảnh | Ngữ cảnh | ... | ... |
+| 4 | Giới hạn hệ thống | Giới hạn hệ thống | ... | ... |
+| 5 | Ngầm | Ngầm | ... | ... |
+| 6 | Do người dùng | Do người dùng | ... | ... |
+| 7 | Hệ thống | Hệ thống | ... | ... |
+| 8 | Hệ thống | Hệ thống | ... | ... |
+| 9 | Do người dùng | Do người dùng | ... | ... |
+| 10 | Ngữ cảnh | Ngữ cảnh | ... | ... |
+| 11 | Giới hạn hệ thống | Giới hạn hệ thống | ... | ... |
+| 12 | Ngầm | Ngầm | ... | ... |
+| 13 | Giới hạn hệ thống | Giới hạn hệ thống | ... | ... |
+| 14 | Do người dùng | Do người dùng | ... | ... |
+| 15 | Hệ thống | Hệ thống | ... | ... |
+| 16 | Ngữ cảnh | Ngữ cảnh | ... | ... |
+| 17 | Ngầm | Ngầm | ... | ... |
+| 18 | Ngữ cảnh | Ngữ cảnh | ... | ... |
+| 19 | Giới hạn hệ thống | Giới hạn hệ thống | ... | ... |
+| 20 | Hệ thống | Hệ thống | ... | ... |
 
 **Tỉ lệ đồng thuận:** ... / 20 = ...%
 
