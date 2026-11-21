@@ -11,7 +11,7 @@
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        |         |
+|   1 | Trần Dương Trung Tính | 2A202603488 | 26ai.tinhtdt@vinuni.edu.vn | trngtnh | Người viết code (Nhiệm vụ A và B, CP1–CP2) |
 | 2 | Trần Anh Duy | 2A202603494 | 26ai.duyta@vinuni.edu.vn | duyanhtran2005 | Người gắn nhãn 2, kiêm giữ hồ sơ launch v0 |
 |   3 |        |      |       |        |         |
 |   4 |        |      |       |        |         |
@@ -53,3 +53,20 @@ Sao chép mục dưới đây cho từng thành viên.
 
 - Commit `c19b331`.
 - [Chỉ số và rủi ro](report/team/chi_so.md), [hồ sơ launch](report/team/ho_so_launch_v0.md), [bảng lỗi](report/team/bang_loi.md).
+
+## Trần Dương Trung Tính — 2A202603488
+
+### Phần việc phụ trách
+
+- CP1: viết ba hàm A1 và hàm `mo_hinh`, tính chi phí theo loại yêu cầu và cộng chi phí cố định.
+- CP2: chạy 9 kịch bản độ nhạy, kịch bản đổi hai yếu tố, so sánh giới hạn 1–3 lần chạy và kịch bản xem lại 100%.
+
+### Đóng góp cụ thể
+
+- Hoàn thành phần A–B trong `src/lab13.py`, vượt qua ba phép thử đáp án biết trước (1,20 · 1,25 · 1,25) và bàn giao bảng A–B cho Vĩ và Duy lúc 15:20.
+- Điền hoàn chỉnh `bang_chi_phi.md`, xác định mức CPS 4.472 đ [simulated], chỉ ra `quoc_te` không hiệu quả và giới hạn 2 lần chạy rẻ nhất cho công ty.
+
+### Bằng chứng
+
+- Commit `83a65ee`.
+- [Bảng chi phí](report/team/bang_chi_phi.md), [mã nguồn lab13.py](src/lab13.py).
