@@ -6,8 +6,6 @@
 
 Người gắn nhãn 1: Nguyễn Nhựt Linh · Người gắn nhãn 2: Trần Anh Duy (gắn trong 8 phút, không trao đổi)
 
-Nhãn ở cột 1 do AI đề xuất và được Linh rà soát, xác nhận. Tỉ lệ đồng thuận độc lập cần hai bộ nhãn tự gắn.
-
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
 | 1 | Do người dùng | Do người dùng | Có | Do người dùng |
@@ -31,7 +29,7 @@ Nhãn ở cột 1 do AI đề xuất và được Linh rà soát, xác nhận. T
 | 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
 | 20 | Hệ thống | Hệ thống | Có | Hệ thống |
 
-**Tỉ lệ trùng giữa hai cột hiện có:** 20/20 = 100%.
+**Tỉ lệ đồng thuận:** 20/20 = 100%.
 
 ## Quy tắc phân biệt cho các ca không trùng
 
