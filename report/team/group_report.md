@@ -23,8 +23,8 @@ Nhóm đánh giá chi phí của trợ lý hoàn phí LogiX-VN và thiết kế 
 
 Chi phí trên toàn mẫu là 4.472 đ/việc thành công trước chi phí cố định [simulated]. Ba chỉ số chạy thử là 82,83% đóng trong 24 giờ và không mở lại trong 7 ngày, 27,12% bỏ qua gợi ý và 4,25% mở lại trong 7 ngày.
 
-- Đề xuất cuối của nhóm: [điền theo hồ sơ launch đã chốt].
-- Kết quả hội đồng chấm nhóm: [điểm, quyết định và nhận xét thực tế].
+- Đề xuất cuối của nhóm: Go có điều kiện cho pilot giới hạn ở `noi_dia` và `hang_nang`.
+- Kết quả hội đồng chấm nhóm: Chưa có kết quả duyệt chéo.
 
 ## 5. Khó khăn và cách xử lý
 

@@ -14,8 +14,8 @@ Nhóm: Nhom4Nam · Lớp: L3A
 | 6 · Pilot plan | Chia ngẫu nhiên theo nhân viên, 20 người mỗi nhóm, có đối chứng cùng thời gian. Cần 859 yêu cầu hiệu dụng mỗi nhóm, tương ứng ít nhất 299 yêu cầu/nhân viên, để phát hiện chênh lệch 6 điểm phần trăm với power 80%. Nếu chênh lệch thực tế là 5 điểm, power còn 64,17%. | Xong, có bằng chứng | Giám đốc vận hành |
 | 7 · Rủi ro kinh tế | Làm lại gấp đôi: 6.787 đ/việc thành công (+51,8%). Xem lại 100%: 12.415 đ/việc thành công nếu mỗi ca làm lại mất 15,3 phút [simulated cho cả hai kịch bản]. | Giả lập | PM trợ lý hoàn phí |
 
-- Giám đốc vận hành kiểm tra đủ 20 nhân viên mỗi nhóm và xác nhận mức chênh lệch tối thiểu 6 điểm phần trăm vào [ngày kiểm tra].
-- Trưởng nhóm CSKH kiểm tra dữ liệu xem lại và làm lại vào [ngày kiểm tra]. Nếu phải xem lại 100%, rà chi phí trước khi tăng mức rollout.
-- PM trợ lý hoàn phí kiểm tra các event có `trace_id` và xác nhận các biện pháp an toàn cần thiết đã sẵn sàng vào [ngày kiểm tra].
+- Giám đốc vận hành kiểm tra đủ 20 nhân viên mỗi nhóm và xác nhận mức chênh lệch tối thiểu 6 điểm phần trăm vào 21/11/2026.
+- Trưởng nhóm CSKH kiểm tra dữ liệu xem lại và làm lại vào 21/11/2026. Nếu phải xem lại 100%, rà chi phí trước khi tăng mức rollout.
+- PM trợ lý hoàn phí kiểm tra các event có `trace_id` và xác nhận các biện pháp an toàn cần thiết đã sẵn sàng vào 21/11/2026.
 
 **Đề xuất:** Go có điều kiện cho pilot giới hạn ở `noi_dia` và `hang_nang`.
