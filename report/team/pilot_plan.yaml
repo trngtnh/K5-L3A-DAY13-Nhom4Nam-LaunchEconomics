@@ -21,31 +21,99 @@
 # Tỉ lệ mo_lai_trong_7_ngay hiện tại và ngưỡng an toàn đã chọn:
 
 pilot:
-  owner: "?"                      # một người có tên vai trò, không ghi "cả đội"
-  scope: "?"                      # loại yêu cầu nào, depot nào; dựa vào kết quả A3
+  owner: "Giám đốc vận hành LogiX-VN" # một người có tên vai trò, không ghi "cả đội"
+  scope: "Chi trien khai voi yeu cau noi_dia va hang_nang tai 6 depot thu nghiem; loai quoc_te do CPS 22.515d (1,88x muc 12.000d). Chua dua doi_tac vao pilot do ty le thanh cong 54,4% va chi co 68 yeu cau trong du lieu mo phong."                      # loại yêu cầu nào, depot nào; dựa vào kết quả A3
   assignment:
-    unit: "?"                     # request | staff | depot
+    unit: "staff" # request | staff | depot
     control_share: 0.5
     randomized: true
   rollout: [0.10, 0.25, 0.50]     # mỗi bước một tuần
   primary_metric:
     name: dong_trong_24h_khong_mo_lai_7_ngay
     baseline: 0.70
-    mde: 0.05
+    mde: 0.06
     alpha: 0.05
     power: 0.80
-    n_per_arm: "?"
-    design_effect: "?"            # 1 nếu chia theo yêu cầu
-    clusters_per_arm: "?"         # để trống nếu chia theo yêu cầu
+    n_per_arm: 859
+    design_effect: 6.96 # 1 nếu chia theo yêu cầu
+    clusters_per_arm: 20 # để trống nếu chia theo yêu cầu
   identifiability:
-    concurrent_control: "?"
-    spillover_risk: "?"
-    predeclared: "?"
+    concurrent_control: "20 nhân viên đối chứng hoạt động đồng thời với 20 nhân viên thử nghiệm, trong cùng giai đoạn và điều kiện vận hành."
+    spillover_risk: "Nhân viên hai nhóm có thể chia sẻ câu trả lời hoặc quy trình. Giảm thiểu bằng phân quyền theo tài khoản và ghi log theo staff_id."
+    predeclared: "Khóa chỉ số chính, MDE, ngưỡng dừng, quy tắc rollback và ngày ra quyết định trước khi pilot bắt đầu."
   stop_rules:
-    - "NẾU ? TRONG ? THÌ ? KHÔNG THÌ ?"
-    - "NẾU ? TRONG ? THÌ ? KHÔNG THÌ ?"
-    - "NẾU ? TRONG ? THÌ ? KHÔNG THÌ ?"
+    - "NẾU tỷ lệ mở lại trong 7 ngày của nhóm thử nghiệm cao hơn nhóm đối chứng ít nhất 2 điểm phần trăm HOẶC vượt 6% trong 2 lần đánh giá tuần liên tiếp THÌ Giám đốc vận hành tắt trợ lý trong tối đa 30 phút; KHÔNG THÌ tiếp tục theo dõi và chưa tăng mức rollout."
+    - "NẾU chi phi moi viec thanh cong cua pilot vuot 12.000 VND trong 2 tuan lien tiep THI tam dung mo rong va thu hep pham vi ve noi_dia; KHONG THI tiep tuc theo doi truoc khi mo rong."
+    - "NẾU tỷ lệ nhân viên bỏ qua đề xuất của trợ lý vượt 40% trong 1 tuần THÌ Trưởng nhóm CS phỏng vấn 5 nhân viên trong 3 ngày và tạm dừng tăng rollout; KHÔNG THÌ tiếp tục theo dõi."
   interim_looks: "chỉ kiểm tra chỉ số an toàn"
-  rollback: "?"                   # ai bấm, mất bao lâu, khách được phục vụ bằng gì
-  decision_date: "?"
-  simulated_inputs: ["?"]         # liệt kê mọi con số giả lập đã dùng
+  rollback: "Giám đốc vận hành kích hoạt kill switch trong tối đa 30 phút; các yêu cầu được chuyển về quy trình xử lý thủ công của nhân viên." # ai bấm, mất bao lâu, khách được phục vụ bằng gì
+  decision_date: "2026-11-21"
+  simulated_inputs: ["baseline=0.70", "MDE=0.06", "alpha=0.05", "power=0.80", "ICC=0.02", "reopen_rate=4.25% (du lieu mo phong)", "requests_per_staff=299"]         # liệt kê mọi con số giả lập đã dùng
+
+# ============================================================
+# D1 - TINH CO MAU VA LUA CHON PHUONG AN PHAN NHOM PILOT
+# ============================================================
+#
+# Nhóm lựa chọn phân nhóm theo nhân viên (staff-level randomization):
+# 20 nhân viên thuộc nhóm thử nghiệm (treatment) và 20 nhân viên
+# thuộc nhóm đối chứng (control). Hai nhóm được triển khai đồng thời.
+#
+# D1a - Nếu phân nhóm ngẫu nhiên theo từng yêu cầu (request-level),
+# cần 1.251 yêu cầu cho mỗi nhóm để phát hiện mức cải thiện 5 điểm
+# phần trăm, với tỷ lệ thành công ban đầu 70%, mức ý nghĩa 5% và
+# statistical power 80%.
+#
+# D1b - Nếu phân nhóm theo nhân viên, với trung bình 75 yêu cầu
+# mỗi nhân viên, design effect = 2,48. Do đó cần khoảng 3.103
+# yêu cầu cho mỗi nhóm.
+#
+# D1c - Với 20 nhân viên mỗi nhóm và ICC = 0,02, cỡ mẫu hiệu dụng
+# tối đa là 20 / 0,02 = 1.000. Vì vậy, nguồn lực hiện có không
+# đủ để đảm bảo phát hiện mức cải thiện 5 điểm phần trăm theo
+# thiết kế ban đầu.
+#
+# D1d - Nếu phân nhóm theo depot, mỗi nhóm có 6 depot. Cỡ mẫu
+# hiệu dụng tối đa chỉ là 6 / 0,02 = 300. Phương án này không
+# đáp ứng yêu cầu cỡ mẫu và có quá ít cụm.
+#
+# D1e - Nhóm chuyển sang thiết kế với MDE = 6 điểm phần trăm,
+# tức tỷ lệ thành công tăng từ 70% lên 76%. Cần 859 yêu cầu
+# hiệu dụng cho mỗi nhóm. Với 20 nhân viên mỗi nhóm, mỗi nhân viên
+# cần xử lý tối thiểu 299 yêu cầu. Design effect = 6,96 và cỡ mẫu
+# hiệu dụng đạt khoảng 859,20 mỗi nhóm.
+#
+# KIEM TRA DO NHAY:
+# Nếu hiệu quả thực tế chỉ tăng 5 điểm phần trăm (70% lên 75%),
+# statistical power của thiết kế 859 yêu cầu mỗi nhóm chỉ đạt
+# 64,17%, thấp hơn mục tiêu 80%.
+#
+# KET LUAN:
+# Nhóm chọn phân nhóm theo nhân viên vì có thể bố trí đủ 20 cụm
+# mỗi nhóm và hạn chế việc một nhân viên sử dụng đồng thời cả
+# phương án thử nghiệm lẫn đối chứng. Nhóm chấp nhận MDE 6 điểm
+# phần trăm như một sự đánh đổi theo nguồn lực hiện có.
+# Không lựa chọn phân nhóm theo depot vì chỉ có 6 depot mỗi nhóm,
+# cỡ mẫu hiệu dụng tối đa 300.
+
+# ============================================================
+# D2 - DAM BAO KHA NANG NHAN DIEN TAC DONG CUA PILOT
+# ============================================================
+#
+# 1. Nhom thu nghiem va nhom doi chung duoc trien khai dong thoi
+# trong cung giai doan va cung dieu kien van hanh.
+#
+# 2. Phan nhom ngau nhien theo staff_id, co ghi lai random seed
+# va phan tang theo depot de tranh mat can bang giua cac nhom.
+#
+# 3. Rui ro spillover: nhan vien hai nhom co the chia se cau tra loi
+# hoac quy trinh xu ly. Bien phap giam thieu: phan quyen truy cap
+# theo tai khoan, ghi log staff_id va theo doi viec mo tro ly.
+#
+# 4. Truoc khi pilot bat dau, khoa primary metric, MDE, nguong
+# dung, quy tac rollback va ngay ra quyet dinh. Khong thay doi
+# tieu chi sau khi da xem ket qua.
+#
+# 5. Thiet ke co 20 nhan vien moi nhom, dap ung yeu cau toi thieu
+# 20 clusters/group. Khong phan nhom theo depot vi chi co 6 depot
+# moi nhom.
+#
