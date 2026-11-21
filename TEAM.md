@@ -13,7 +13,7 @@
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 | Trần Dương Trung Tính | 2A202603488 | 26ai.tinhtdt@vinuni.edu.vn | trngtnh | Người viết code (Nhiệm vụ A và B, CP1–CP2) |
 | 2 | Trần Anh Duy | 2A202603494 | 26ai.duyta@vinuni.edu.vn | duyanhtran2005 | Người gắn nhãn 2, kiêm giữ hồ sơ launch v0 |
-|   3 |        |      |       |        |         |
+| 3 | Nguyễn Nhựt Linh | 2A202603492 | 26ai.linhnn2@vinuni.edu.vn | codenhenhe | Người gắn nhãn 1, phụ trách bảng lỗi CP3 và hoàn thiện báo cáo nhóm sau chấm chéo |
 |   4 |        |      |       |        |         |
 
 Bốn vai của lab:
@@ -70,3 +70,20 @@ Sao chép mục dưới đây cho từng thành viên.
 
 - Commit `83a65ee`.
 - [Bảng chi phí](report/team/bang_chi_phi.md), [mã nguồn lab13.py](src/lab13.py).
+
+## Nguyễn Nhựt Linh — 2A202603492
+
+### Phần việc phụ trách
+
+- CP3: rà soát và chốt 20 nhãn ở cột người gắn nhãn 1, đối chiếu với bộ nhãn của Duy và hoàn thiện bảng khắc phục.
+- Sau chấm chéo Gate 2a: tiếp quản phần hoàn thiện báo cáo nhóm và tổng hợp kết quả từ hai phiếu chấm.
+
+### Đóng góp cụ thể
+
+- Ghi nhận hai cột nhãn trùng **20/20 ca**. Hoàn thiện **5 phương án khắc phục** cho các ca 1, 7, 18, 19 và 17, mỗi loại lỗi một ca.
+- Cập nhật mục Kết quả của báo cáo nhóm với điểm, quyết định của hội đồng và nội dung hỏi đáp về cách giảm tần suất xem lại mà vẫn bảo đảm an toàn.
+
+### Bằng chứng
+
+- Commit `1ffb09d` và `4c94e7b` ghi nhận phần rà soát nhãn, đối chiếu và hoàn thiện bảng khắc phục.
+- [Bảng lỗi](report/team/bang_loi.md), [báo cáo nhóm](report/team/group_report.md), [báo cáo cá nhân](report/team/2A202603492_NguyenNhutLinh.md).

@@ -2,8 +2,8 @@
 
 Nhóm số n chấm nhóm số n + 1; nhóm cuối chấm nhóm 1. Chấm theo bằng chứng trong hồ sơ, không theo cách trình bày: một đề xuất No-go có lý do bằng số được điểm cao hơn một đề xuất Go bỏ qua con số bất lợi.
 
-- Nhóm chấm (hội đồng): Nhóm 4 Nam
-- Nhóm được chấm: Nhóm 9999
+- Nhóm chấm (hội đồng): Nhom4Nam
+- Nhóm được chấm: 9999
 
 | Tiêu chí | 0 điểm | 5 điểm | 10 điểm | Điểm | Lý do (có số) |
 | --- | --- | --- | --- | ---: | --- |

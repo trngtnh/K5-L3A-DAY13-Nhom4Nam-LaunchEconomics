@@ -10,7 +10,7 @@ Nhóm: Nhom4Nam · Lớp: L3A
 | 2 · Ba yếu tố nhạy nhất | Làm lại gấp đôi: +51,8%; xem lại gấp đôi: +40,7%; lương tăng 25%: +23,1% [simulated]. | Giả lập | PM trợ lý hoàn phí |
 | 3 · So với nhân viên tự làm | Với giới hạn 3 lần chạy, tổng chi phí hệ thống gồm cả phần nhân viên làm thay là 5.865 đ/yêu cầu trên toàn mẫu [simulated], so với 12.000 đ/yêu cầu khi nhân viên tự làm. | Giả lập | Giám đốc vận hành |
 | 4 · Chỉ số chính, chỉ số dùng, chỉ số an toàn | Đợt chạy thử: đóng trong 24 giờ và không mở lại trong 7 ngày 82,83% (994/1.200); bỏ qua gợi ý 27,12% (48/177); mở lại trong 7 ngày 4,25% (51/1.200). | Xong, có bằng chứng | PM trợ lý hoàn phí |
-| 5 · Bảng lỗi và cách khắc phục | Hai bộ nhãn độc lập trùng 20/20 ca. Bảng khắc phục có 5 biện pháp cho 5 loại lỗi, mỗi biện pháp có cách phát hiện và vai trò phụ trách. | Xong, có bằng chứng | PM trợ lý hoàn phí |
+| 5 · Bảng lỗi và cách khắc phục | Linh phụ trách bảng lỗi. Hai cột nhãn trùng 20/20 ca. Bảng có 5 biện pháp cho 5 loại lỗi, mỗi biện pháp có cách phát hiện và vai trò phụ trách. | Xong, có bằng chứng | PM trợ lý hoàn phí |
 | 6 · Pilot plan | Chia ngẫu nhiên theo nhân viên, 20 người mỗi nhóm, có đối chứng cùng thời gian. Cần 859 yêu cầu hiệu dụng mỗi nhóm, tương ứng ít nhất 299 yêu cầu/nhân viên, để phát hiện chênh lệch 6 điểm phần trăm với power 80%. Nếu chênh lệch thực tế là 5 điểm, power còn 64,17%. | Xong, có bằng chứng | Giám đốc vận hành |
 | 7 · Rủi ro kinh tế | Làm lại gấp đôi: 6.787 đ/việc thành công (+51,8%). Xem lại 100%: 12.415 đ/việc thành công nếu mỗi ca làm lại mất 15,3 phút [simulated cho cả hai kịch bản]. | Giả lập | PM trợ lý hoàn phí |
 
