@@ -14,7 +14,7 @@
 |   1 | Trần Dương Trung Tính | 2A202603488 | 26ai.tinhtdt@vinuni.edu.vn | trngtnh | Người viết code (Nhiệm vụ A và B, CP1–CP2) |
 | 2 | Trần Anh Duy | 2A202603494 | 26ai.duyta@vinuni.edu.vn | duyanhtran2005 | Người gắn nhãn 2, kiêm giữ hồ sơ launch v0 |
 | 3 | Nguyễn Nhựt Linh | 2A202603492 | 26ai.linhnn2@vinuni.edu.vn | codenhenhe | Người gắn nhãn 1, phụ trách bảng lỗi CP3 và hoàn thiện báo cáo nhóm sau chấm chéo |
-|   4 |        |      |       |        |         |
+|   4 | Trương Lợi Vĩ | 2A202603441 |26ai.vitl@vinuni.edu.vn| ViTL-Ai26 | Người kiểm số, phụ trách CP4 – Gate 2a          |
 
 Bốn vai của lab:
 
@@ -87,3 +87,26 @@ Sao chép mục dưới đây cho từng thành viên.
 
 - Commit `1ffb09d` và `4c94e7b` ghi nhận phần rà soát nhãn, đối chiếu và hoàn thiện bảng khắc phục.
 - [Bảng lỗi](report/team/bang_loi.md), [báo cáo nhóm](report/team/group_report.md), [báo cáo cá nhân](report/team/2A202603492_NguyenNhutLinh.md).
+
+## Trương Lợi Vĩ — 2A202603441
+
+### Phần việc phụ trách
+
+- CP4 – Gate 2a: tính toán cỡ mẫu thử nghiệm, đánh giá tính khả thi của các phương án phân nhóm và đề xuất thiết kế pilot cho LogiX-VN.
+- Kiểm tra tỷ lệ yêu cầu mở lại trong 7 ngày từ dữ liệu mô phỏng, xây dựng các điều kiện nhận diện tác động và đề xuất quy tắc dừng pilot.
+- Tích hợp phần tính toán D1 vào `src/lab13.py`, hoàn thiện `report/team/pilot_plan.yaml`.
+
+### Đóng góp cụ thể
+
+- Tính cỡ mẫu cho phương án request-level: **1.251 yêu cầu/nhóm** với baseline 70%, MDE 5 điểm phần trăm, alpha 0,05 và power 0,80.
+- Đánh giá phương án staff-level với 20 nhân viên mỗi nhóm và ICC = 0,02; xác định giới hạn mẫu hiệu dụng khi chỉ có 20 nhân viên/nhóm là 1.000, thấp hơn cỡ mẫu yêu cầu 1.251.
+- Phân tích phương án MDE 6 điểm phần trăm, xác định cần **859 yêu cầu/nhóm**, tối thiểu khoảng **299 yêu cầu/nhân viên** với 20 nhân viên mỗi nhóm. Nếu hiệu ứng thực tế chỉ đạt 5 điểm phần trăm, power giảm còn khoảng 0,6417.
+- Tính tỷ lệ mở lại trong 7 ngày từ dữ liệu mô phỏng: **51/1.200 yêu cầu, tương đương 4,25%**.
+- Đề xuất phân nhóm theo nhân viên, triển khai pilot đồng thời giữa nhóm đối chứng và nhóm thử nghiệm; xây dựng các quy tắc dừng liên quan đến an toàn, chi phí và mức độ sử dụng.
+- Tích hợp mã tính toán D1 vào `src/lab13.py`; hoàn thiện kế hoạch pilot với phạm vi thử nghiệm, chỉ số đánh giá, điều kiện dừng và phương án rollback trong `pilot_plan.yaml`.
+
+### Bằng chứng
+
+- Commit `66f083c`.
+- [Mã nguồn lab13.py](../src/lab13.py).
+- [Kế hoạch pilot](pilot_plan.yaml).
