@@ -22,7 +22,7 @@
 
 pilot:
   owner: "Giám đốc vận hành LogiX-VN" # một người có tên vai trò, không ghi "cả đội"
-  scope: "Chi trien khai voi yeu cau noi_dia va hang_nang tai 6 depot thu nghiem; loai quoc_te do CPS 22.515d (1,88x muc 12.000d). Chua dua doi_tac vao pilot do ty le thanh cong 54,4% va chi co 68 yeu cau trong du lieu mo phong."                      # loại yêu cầu nào, depot nào; dựa vào kết quả A3
+  scope: "Tuyen du 40 nhan vien CSKH tu 12 depot cua LogiX-VN, phan tang theo depot va randomize theo staff_id thanh 20 nhan vien control va 20 nhan vien treatment. Chi pilot voi yeu cau noi_dia va hang_nang; loai quoc_te do CPS 22.515 VND (1,88x nguong 12.000 VND); chua dua doi_tac vao pilot do ty le thanh cong 54,4% va chi co 68 yeu cau trong du lieu mo phong. Pham vi nhan su chi duoc chot sau khi doi chieu roster thuc te."
   assignment:
     unit: "staff" # request | staff | depot
     control_share: 0.5
@@ -43,11 +43,11 @@ pilot:
     predeclared: "Khóa chỉ số chính, MDE, ngưỡng dừng, quy tắc rollback và ngày ra quyết định trước khi pilot bắt đầu."
   stop_rules:
     - "NẾU tỷ lệ mở lại trong 7 ngày của nhóm thử nghiệm cao hơn nhóm đối chứng ít nhất 2 điểm phần trăm HOẶC vượt 6% trong 2 lần đánh giá tuần liên tiếp THÌ Giám đốc vận hành tắt trợ lý trong tối đa 30 phút; KHÔNG THÌ tiếp tục theo dõi và chưa tăng mức rollout."
-    - "NẾU chi phi moi viec thanh cong cua pilot vuot 12.000 VND trong 2 tuan lien tiep THI tam dung mo rong va thu hep pham vi ve noi_dia; KHONG THI tiep tuc theo doi truoc khi mo rong."
-    - "NẾU tỷ lệ nhân viên bỏ qua đề xuất của trợ lý vượt 40% trong 1 tuần THÌ Trưởng nhóm CS phỏng vấn 5 nhân viên trong 3 ngày và tạm dừng tăng rollout; KHÔNG THÌ tiếp tục theo dõi."
+    - "NẾU CPS của nhóm thử nghiệm vượt 12.000 VND trên mỗi yêu cầu thành công trong 2 lần đánh giá tuần liên tiếp THÌ Giám đốc vận hành (Ops Director) có quyền dừng rollout, kích hoạt kill switch trong tối đa 30 phút và chuyển yêu cầu sang quy trình xử lý thủ công; KHÔNG THÌ tiếp tục theo dõi ở giai đoạn hiện tại và chưa tự động phê duyệt mở rộng."
+    - "NẾU tỷ lệ nhân viên sử dụng trợ lý trên tổng số yêu cầu đủ điều kiện thấp hơn 60% trong 1 tuần THÌ Trưởng nhóm CS phỏng vấn 5 nhân viên trong 3 ngày, giữ nguyên mức rollout hiện tại và không cho phép chuyển sang nấc rollout tiếp theo; KHÔNG THÌ tiếp tục theo dõi và được xem xét chuyển sang nấc rollout tiếp theo nếu các chỉ số an toàn và chi phí đều đạt ngưỡng."
   interim_looks: "chỉ kiểm tra chỉ số an toàn"
   rollback: "Giám đốc vận hành kích hoạt kill switch trong tối đa 30 phút; các yêu cầu được chuyển về quy trình xử lý thủ công của nhân viên." # ai bấm, mất bao lâu, khách được phục vụ bằng gì
-  decision_date: "2026-11-21"
+  decision_date: "2026-12-21"
   simulated_inputs: ["baseline=0.70", "MDE=0.06", "alpha=0.05", "power=0.80", "ICC=0.02", "reopen_rate=4.25% (du lieu mo phong)", "requests_per_staff=299"]         # liệt kê mọi con số giả lập đã dùng
 
 # ============================================================
